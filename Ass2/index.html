@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Marks Management System</h1>
+
+        <div class="form-container">
+            <h2>Enter Student Details</h2>
+
+            <form id="studentForm">
+
+                <div class="input-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" placeholder="Enter student name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="rollNo">Roll Number</label>
+                    <input type="text" id="rollNo" placeholder="Enter roll number" required>
+                </div>
+
+                <div class="marks-section">
+                    <h3>Enter Marks (Out of 100)</h3>
+
+                    <div class="marks-grid">
+
+                        <div class="input-group">
+                            <label for="subject1">Subject 1</label>
+                            <input type="number" id="subject1" min="0" max="100" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="subject2">Subject 2</label>
+                            <input type="number" id="subject2" min="0" max="100" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="subject3">Subject 3</label>
+                            <input type="number" id="subject3" min="0" max="100" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="subject4">Subject 4</label>
+                            <input type="number" id="subject4" min="0" max="100" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="subject5">Subject 5</label>
+                            <input type="number" id="subject5" min="0" max="100" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="add-btn">Add Student</button>
+                    <button type="button" class="clear-btn" onclick="clearForm()">Clear Form</button>
+                </div>
+
+            </form>
+        </div>
+
+
+        <!-- Topper Section -->
+        <div class="topper-section">
+            <h2>🏆 Class Topper</h2>
+            <div id="topper">
+                No student records available.
+            </div>
+        </div>
+
+
+        <!-- Records Section -->
+        <div class="records-section">
+
+            <div class="records-header">
+                <h2>All Student Records</h2>
+                <button class="delete-all-btn" onclick="deleteAllStudents()">
+                    Delete All Records
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Student Name</th>
+                            <th>Roll No.</th>
+                            <th>Subject 1</th>
+                            <th>Subject 2</th>
+                            <th>Subject 3</th>
+                            <th>Subject 4</th>
+                            <th>Subject 5</th>
+                            <th>Total</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                        <!-- Records will be added here -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
