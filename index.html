@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Result Management System</h1>
+        <p class="subtitle">Enter student details and marks</p>
+
+        <form id="studentForm">
+            <label for="roll">Roll Number</label>
+            <input type="text" id="roll" placeholder="Enter roll number" required>
+
+            <label for="name">Student Name</label>
+            <input type="text" id="name" placeholder="Enter student name"
+                   pattern="[A-Za-z ]+" title="Enter letters and spaces only"
+                   required>
+
+            <label for="course">Course / Class</label>
+            <input type="text" id="course" placeholder="e.g. B.Tech IT" required>
+
+            <h3>Enter Marks (0–100)</h3>
+
+            <div class="marks">
+                <input type="number" id="m1" placeholder="Subject 1" min="0" max="100" step="1" required>
+                <input type="number" id="m2" placeholder="Subject 2" min="0" max="100" step="1" required>
+                <input type="number" id="m3" placeholder="Subject 3" min="0" max="100" step="1" required>
+                <input type="number" id="m4" placeholder="Subject 4" min="0" max="100" step="1" required>
+                <input type="number" id="m5" placeholder="Subject 5" min="0" max="100" step="1" required>
+            </div>
+
+            <button type="submit">Add Student Result</button>
+        </form>
+
+        <p id="message" role="status"></p>
+
+        <div class="summary">
+            <p><strong>Total Students:</strong> <span id="count">0</span></p>
+            <p><strong>Class Topper:</strong> <span id="topper">None</span></p>
+        </div>
+
+        <h2>Student Records</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Total / 500</th>
+                        <th>Percentage</th>
+                        <th>Result</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                    <tr>
+                        <td colspan="7">No student records available.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
