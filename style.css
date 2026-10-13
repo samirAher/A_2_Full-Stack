@@ -1,0 +1,2110 @@
+<<<<<<< HEAD
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+h1 {
+    text-align: center;
+    color: #2457a7;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+form {
+    background: #f8faff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #8bb6ff;
+    border-color: #2457a7;
+}
+
+.marks {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+button {
+    background: #2457a7;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #173c7c;
+}
+
+.summary {
+    background: #eaf2ff;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 7px;
+}
+
+h2 {
+    color: #2457a7;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th {
+    background: #2457a7;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f4f7fc;
+}
+
+.delete-btn {
+    background: #dc3545;
+    margin: 0;
+    padding: 7px 10px;
+}
+
+.delete-btn:hover {
+    background: #b52030;
+}
+
+#message {
+    font-weight: bold;
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .marks {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+=======
+/*=====================================================
+        KBTCOE COLLEGE WEBSITE
+        STYLE.CSS - PART 2A
+        Bootstrap 5 Custom Styling
+======================================================*/
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*==========================
+RESET
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F8F9FA;
+    color:#343A40;
+    overflow-x:hidden;
+}
+
+/*==========================
+COLORS
+==========================*/
+
+:root{
+
+--primary:#0D6EFD;
+--secondary:#0DCAF0;
+--success:#198754;
+--dark:#212529;
+--light:#F8F9FA;
+--gray:#6C757D;
+--white:#FFFFFF;
+
+}
+
+/*==========================
+GENERAL
+==========================*/
+
+section{
+    padding:90px 0;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight:700;
+}
+
+p{
+    color:#6C757D;
+    line-height:1.8;
+}
+
+img{
+    max-width:100%;
+}
+
+/*==========================
+NAVBAR
+==========================*/
+
+.navbar{
+
+    background:#212529 !important;
+
+    transition:.4s;
+
+    padding:15px 0;
+
+}
+
+.navbar-brand{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:white !important;
+
+}
+
+.navbar-brand i{
+
+    color:var(--primary);
+
+    margin-right:10px;
+
+}
+
+.navbar-nav .nav-link{
+
+    color:white !important;
+
+    margin-left:18px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.navbar-nav .nav-link:hover{
+
+    color:var(--secondary) !important;
+
+}
+
+.navbar-nav .nav-link.active{
+
+    color:var(--secondary)!important;
+
+}
+
+.navbar-toggler{
+
+    border:none;
+
+}
+
+.navbar-toggler:focus{
+
+    box-shadow:none;
+
+}
+
+/*==========================
+HERO SECTION
+==========================*/
+
+.hero{
+
+    padding-top:140px;
+
+    padding-bottom:90px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #ffffff,
+
+    #edf4ff
+
+    );
+
+}
+
+.hero h5{
+
+    color:var(--primary);
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    color:#212529;
+
+    margin-bottom:15px;
+
+}
+
+.hero h3{
+
+    color:#495057;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.hero img{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.hero img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/*==========================
+BUTTONS
+==========================*/
+
+.btn{
+
+    border-radius:50px;
+
+    padding:12px 35px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#0056D2;
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline-primary{
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-outline-primary:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-3px);
+
+}
+
+/*==========================
+ABOUT
+==========================*/
+
+.bg-light{
+
+    background:#F1F5F9 !important;
+
+}
+
+.about-img{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.about-img img{
+
+    transition:.5s;
+
+}
+
+.about-img img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==========================
+SECTION TITLES
+==========================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    color:var(--primary);
+
+    font-size:42px;
+
+}
+
+.section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/*==========================
+CARDS
+==========================*/
+
+.card{
+
+    border:none;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 10px 30px
+
+    rgba(0,0,0,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+    0 20px 45px
+
+    rgba(13,110,253,.2);
+
+}
+
+.card-body{
+
+    padding:35px;
+
+}
+
+.card i{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.card h4{
+
+    margin-bottom:15px;
+
+}
+
+/*==========================
+ICONS
+==========================*/
+
+.display-4{
+
+    color:var(--primary);
+
+}
+
+/*==========================
+STATISTICS
+==========================*/
+
+.bg-primary{
+
+    background:linear-gradient(
+
+    135deg,
+
+    #0D6EFD,
+
+    #0DCAF0
+
+    ) !important;
+
+}
+
+.bg-primary h1{
+
+    font-size:55px;
+
+    font-weight:700;
+
+}
+
+.bg-primary p{
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+/*==========================
+FOOTER
+==========================*/
+
+footer{
+
+    background:#212529;
+
+}
+
+footer p{
+
+    color:white;
+
+    margin-bottom:8px;
+
+}
+
+/*==========================
+SHADOWS
+==========================*/
+
+.shadow{
+
+    box-shadow:
+
+    0 15px 40px
+
+    rgba(0,0,0,.12)!important;
+
+}
+
+.shadow-lg{
+
+    box-shadow:
+
+    0 25px 60px
+
+    rgba(0,0,0,.18)!important;
+
+}
+
+/*==========================
+ANIMATIONS
+==========================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero .row{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.card{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+/*==========================
+SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#E9ECEF;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0D6EFD;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0056D2;
+
+}
+
+/*=====================================================
+        STYLE.CSS - PART 2B
+        KBTCOE Bootstrap Website
+======================================================*/
+
+
+/*====================================
+        DEPARTMENTS SECTION
+====================================*/
+
+.departments{
+    background:#ffffff;
+}
+
+.departments .card{
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.departments .card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(13,110,253,.25);
+
+}
+
+.departments .card-body{
+
+    padding:35px;
+
+}
+
+.departments i{
+
+    font-size:60px;
+
+    color:var(--primary);
+
+    transition:.5s;
+
+}
+
+.departments .card:hover i{
+
+    transform:rotate(360deg);
+
+    color:var(--secondary);
+
+}
+
+.departments h4{
+
+    margin-top:20px;
+
+    color:#212529;
+
+}
+
+.departments p{
+
+    margin-top:15px;
+
+}
+
+
+/*====================================
+        FACILITIES
+====================================*/
+
+.facilities{
+
+    background:#F8F9FA;
+
+}
+
+.facility-box{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    height:100%;
+
+}
+
+.facility-box:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-10px);
+
+}
+
+.facility-box:hover h4,
+.facility-box:hover p,
+.facility-box:hover i{
+
+    color:white;
+
+}
+
+.facility-box i{
+
+    font-size:50px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    transition:.4s;
+
+}
+
+.facility-box h4{
+
+    margin-bottom:15px;
+
+}
+
+
+/*====================================
+        PLACEMENT
+====================================*/
+
+.placement{
+
+    background:linear-gradient(
+
+    135deg,
+
+    #0D6EFD,
+
+    #0DCAF0
+
+    );
+
+    color:white;
+
+}
+
+.placement h2{
+
+    color:white;
+
+}
+
+.placement p{
+
+    color:white;
+
+}
+
+.company-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    color:#212529;
+
+}
+
+.company-card:hover{
+
+    transform:scale(1.05);
+
+}
+
+.company-card img{
+
+    width:120px;
+
+    margin:auto;
+
+}
+
+
+/*====================================
+        ACHIEVEMENTS
+====================================*/
+
+.achievement{
+
+    background:#ffffff;
+
+}
+
+.achievement-box{
+
+    background:#F8F9FA;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.4s;
+
+    text-align:center;
+
+}
+
+.achievement-box:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-10px);
+
+}
+
+.achievement-box:hover p{
+
+    color:white;
+
+}
+
+.achievement-box i{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.achievement-box:hover i{
+
+    color:white;
+
+}
+
+
+/*====================================
+        COUNTER
+====================================*/
+
+.counter{
+
+    background:#212529;
+
+    color:white;
+
+}
+
+.counter-box{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.counter-box h2{
+
+    font-size:55px;
+
+    font-weight:700;
+
+    color:#0DCAF0;
+
+}
+
+.counter-box p{
+
+    color:white;
+
+}
+
+
+/*====================================
+        GALLERY
+====================================*/
+
+.gallery{
+
+    background:white;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    transition:.5s;
+
+    cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+
+/*====================================
+        FACULTY
+====================================*/
+
+.faculty{
+
+    background:#F8F9FA;
+
+}
+
+.faculty-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    text-align:center;
+
+    height:100%;
+
+}
+
+.faculty-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.faculty-card img{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-top:30px;
+
+    border:6px solid #0D6EFD;
+
+}
+
+.faculty-card h4{
+
+    margin-top:20px;
+
+}
+
+.faculty-card p{
+
+    margin-bottom:25px;
+
+}
+
+
+/*====================================
+        TESTIMONIAL
+====================================*/
+
+.testimonial{
+
+    background:white;
+
+}
+
+.testimonial-card{
+
+    background:#F8F9FA;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.testimonial-card img{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:20px;
+
+}
+
+.testimonial-card i{
+
+    color:#FFC107;
+
+}
+
+
+/*====================================
+        NOTICE BOARD
+====================================*/
+
+.notice{
+
+    background:#F8F9FA;
+
+}
+
+.notice-box{
+
+    background:white;
+
+    border-left:6px solid var(--primary);
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.notice-box ul{
+
+    list-style:none;
+
+    padding-left:0;
+
+}
+
+.notice-box li{
+
+    padding:15px 0;
+
+    border-bottom:1px solid #DEE2E6;
+
+}
+
+.notice-box li:last-child{
+
+    border:none;
+
+}
+
+
+/*====================================
+        HOVER EFFECT
+====================================*/
+
+.zoom{
+
+    overflow:hidden;
+
+}
+
+.zoom img{
+
+    transition:.6s;
+
+}
+
+.zoom:hover img{
+
+    transform:scale(1.1);
+
+}
+
+
+/*====================================
+        GLASS EFFECT
+====================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+
+/*====================================
+        BADGES
+====================================*/
+
+.badge-custom{
+
+    background:#0DCAF0;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+}
+
+
+/*====================================
+        SECTION DIVIDER
+====================================*/
+
+.divider{
+
+    width:90px;
+
+    height:4px;
+
+    background:#0D6EFD;
+
+    margin:20px auto;
+
+    border-radius:20px;
+
+}
+
+
+/*====================================
+        IMAGE EFFECT
+====================================*/
+
+.round-image{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.round-image img{
+
+    transition:.5s;
+
+}
+
+.round-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*====================================
+        BACKGROUND GRADIENT
+====================================*/
+
+.gradient-bg{
+
+    background:linear-gradient(
+
+    135deg,
+
+    #0D6EFD,
+
+    #6610F2,
+
+    #0DCAF0
+
+    );
+
+    color:white;
+
+}
+
+
+/*====================================
+        TITLE ANIMATION
+====================================*/
+
+.section-title h2{
+
+    position:relative;
+
+}
+
+.section-title h2::after{
+
+    content:"";
+
+    width:80px;
+
+    height:4px;
+
+    background:#0D6EFD;
+
+    display:block;
+
+    margin:15px auto;
+
+    border-radius:10px;
+
+}
+
+/*=====================================================
+        KBTCOE WEBSITE
+        STYLE.CSS - PART 2C
+======================================================*/
+
+
+/*=========================================
+        CONTACT SECTION
+=========================================*/
+
+.contact{
+    background:#f8f9fa;
+}
+
+.contact .card{
+    border:none;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.contact .card-body{
+    padding:40px;
+}
+
+.contact h2{
+    color:#0d6efd;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+.form-control{
+
+    border-radius:12px;
+
+    padding:14px;
+
+    border:1px solid #ced4da;
+
+    transition:.3s;
+
+}
+
+.form-control:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 10px rgba(13,110,253,.25);
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+.contact-info{
+
+    background:#ffffff;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.contact-info i{
+
+    font-size:30px;
+
+    color:#0d6efd;
+
+    margin-right:15px;
+
+}
+
+
+/*=========================================
+        GOOGLE MAP
+=========================================*/
+
+.map iframe{
+
+    width:100%;
+
+    height:400px;
+
+    border:0;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+
+/*=========================================
+        FOOTER
+=========================================*/
+
+footer{
+
+    background:#212529;
+
+    color:white;
+
+    padding:60px 0 20px;
+
+}
+
+footer h4{
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+footer p{
+
+    color:#ced4da;
+
+}
+
+footer a{
+
+    color:#ced4da;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#0dcaf0;
+
+}
+
+.footer-social{
+
+    margin-top:25px;
+
+}
+
+.footer-social a{
+
+    display:inline-flex;
+
+    width:45px;
+
+    height:45px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#343a40;
+
+    margin:0 6px;
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+.footer-social a:hover{
+
+    background:#0d6efd;
+
+    transform:translateY(-5px);
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    text-align:center;
+
+}
+
+
+/*=========================================
+        BACK TO TOP BUTTON
+=========================================*/
+
+.top-btn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:50px;
+
+    height:50px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    text-decoration:none;
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+.top-btn:hover{
+
+    background:#084298;
+
+    transform:translateY(-5px);
+
+}
+
+
+/*=========================================
+        LOADER
+=========================================*/
+
+.loader{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.loader::after{
+
+    content:"";
+
+    width:70px;
+
+    height:70px;
+
+    border:8px solid #dee2e6;
+
+    border-top:8px solid #0d6efd;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+/*=========================================
+        SCROLL REVEAL
+=========================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*=========================================
+        IMAGE HOVER
+=========================================*/
+
+.image-hover{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.image-hover img{
+
+    transition:.6s;
+
+}
+
+.image-hover:hover img{
+
+    transform:scale(1.1);
+
+}
+
+
+/*=========================================
+        BUTTON EFFECT
+=========================================*/
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.5),
+
+    transparent
+
+    );
+
+    transition:.6s;
+
+}
+
+.btn:hover::before{
+
+    left:100%;
+
+}
+
+
+/*=========================================
+        CARD GLOW
+=========================================*/
+
+.card:hover{
+
+    box-shadow:
+
+    0 0 20px rgba(13,110,253,.25),
+
+    0 0 40px rgba(13,110,253,.15);
+
+}
+
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero img{
+
+margin-bottom:40px;
+
+}
+
+.navbar-nav{
+
+text-align:center;
+
+padding-top:20px;
+
+}
+
+.section-title h2{
+
+font-size:35px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h3{
+
+font-size:24px;
+
+}
+
+.display-4{
+
+font-size:42px;
+
+}
+
+.card{
+
+margin-bottom:25px;
+
+}
+
+.counter-box{
+
+margin-bottom:30px;
+
+}
+
+footer{
+
+text-align:center;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero h3{
+
+font-size:20px;
+
+}
+
+.btn{
+
+width:100%;
+
+margin-bottom:12px;
+
+}
+
+.section-title h2{
+
+font-size:28px;
+
+}
+
+footer{
+
+padding:40px 15px;
+
+}
+
+}
+
+
+/*=========================================
+        CUSTOM SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#0d6efd;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#084298;
+
+}
+
+
+/*=========================================
+        TEXT SELECTION
+=========================================*/
+
+::selection{
+
+background:#0d6efd;
+
+color:white;
+
+}
+
+
+/*=========================================
+        SMOOTH FADE ANIMATION
+=========================================*/
+
+.fade-up{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes ripple{
+
+0%{
+
+transform:scale(0);
+
+opacity:.6;
+
+}
+
+100%{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
+
+/*==========================
+      FACULTY SECTION
+==========================*/
+
+.faculty{
+    background:#f8f9fa;
+}
+
+.faculty-card{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:0.4s;
+
+    background:white;
+
+    padding:20px;
+
+}
+
+.faculty-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+.faculty-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(13,110,253,.25);
+}
+
+.faculty-card img{
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid #ffffff;
+
+    display:block;
+
+    margin:20px auto;
+
+}
+
+.faculty-card h4{
+    font-weight:700;
+    color:#212529;
+}
+
+.faculty-card h6{
+    color:#0d6efd;
+}
+
+.faculty-card p{
+    color:#6c757d;
+}
+
+.faculty-card .badge{
+    font-size:13px;
+    border-radius:20px;
+    padding:8px 15px;
+}
+
+.faculty-card .btn{
+    border-radius:25px;
+}
+
+.faculty hr{
+    display: none;
+}
+
+/*==============================
+FACULTY SECTION
+==============================*/
+
+.faculty{
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.faculty-card{
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    background: #ffffff;
+}
+
+.faculty-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.faculty-card img{
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #0d6efd;
+    transition:0.4s;
+}
+
+.faculty-card:hover img{
+    transform:scale(1.08);
+}
+
+.faculty-card h4{
+    color:#0d6efd;
+    font-weight:700;
+}
+
+.faculty-card p{
+    color:#555;
+    margin-bottom:10px;
+}
+
+.faculty-card .badge{
+    font-size:14px;
+    padding:10px 18px;
+    border-radius:30px;
+}
+
+.faculty-card i{
+    margin-right:8px;
+}
+
+.faculty-card .btn{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.faculty-card .btn:hover{
+    transform:scale(1.1);
+}
+
+.faculty h2{
+    color:#0d6efd;
+    font-weight:700;
+}
+
+.faculty h5{
+    letter-spacing:2px;
+}
+
+.faculty .text-muted{
+    max-width:700px;
+    margin:auto;
+}
+
+.faculty-card{
+    border:2px solid transparent;
+}
+
+.faculty-card:hover{
+    border-color:#0d6efd;
+}
+
+@media (max-width:768px){
+
+    .faculty-card{
+        margin-bottom:25px;
+    }
+
+    .faculty-card img{
+        width:140px;
+        height:140px;
+    }
+
+}
+>>>>>>> 4d8a94c7beabe57384abe1da91fa731dd9003465
